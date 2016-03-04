@@ -1,6 +1,11 @@
 # ELM library
+**Contributors:** [deshi-basara](https://github.com/deshi-basara), [vpav](https://github.com/vpav), [florianbeck](https://github.com/florianbeck)   
+**Organisation:** Stuttgart Media University  
+**License:** GPLv3 ([http://www.gnu.org/licenses/gpl-3.0.html](http://www.gnu.org/licenses/gpl-3.0.html))
 
 ELM library is an Arduino library which handles communication with an [ELM327](http://www.elmelectronics.com/obdic.html) or ELM327 compatible chip used for car on-board diagnosis. It supports the display of current data (OBD Mode 1) and the display and clearing of diagnostic trouble codes (DTCs). Furthermore it is capable of displaying vehicle information like the [VIN](https://en.wikipedia.org/wiki/Vehicle_identification_number) and the ECU Model.
+
+**Note:** This library was actually developed for the [LibreXC](https://github.com/deshi-basara/libreXC)-project.
 
 ## Getting started
 
@@ -153,10 +158,7 @@ Mode 10 | Display permanent DTCs | :x: Not supported
 * Error Handling
 * Only automatic protocol detection, no manual protocol setting
 
-
-**TODO: desciption**
-
 ## Licence & Copyright
 
-ELM lib was written by Simon Schuster, Florian Beck and Viktor Pavlovic.
-ELM lib is licensed under the [GNU General Public License v3](http://www.gnu.org/licenses/gpl-3.0). 
+libELM was written by Simon Schuster, Florian Beck and Viktor Pavlovic.
+libELM is licensed under the [GNU General Public License v3](http://www.gnu.org/licenses/gpl-3.0). 
