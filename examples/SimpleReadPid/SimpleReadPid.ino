@@ -1,12 +1,13 @@
 #include <elm.h>
 
-ELM myELM;
+byte serialRX = 9;  // RX pin
+byte serialTX = 10; // TX pin
+ELM myELM(serialRX, serialTX);
 
 void setup() {
-  // initialize ELM's connection
-  int serialRX = 9; // RX pin
-  int serialTX = 10; // TX pin
-  myELM.begin(serialRX, serialTX);
+  // initialize ELM's connection at 9600 baud
+  int UARTbaud = 9600;
+  myELM.begin(UARTbaud);
   // initialize serial and wait for port to open
   Serial.begin(9600);
   while (!Serial) {
@@ -22,5 +23,5 @@ void loop() {
   String myDescription = myELM.get_pid_desc(pid);
   String myUnit = myELM.get_pid_unit(pid);
   // print to serial monitor
-  Serial.println("The value of " + myDesc + " is " + myValue + " "  + myUnit); 
+  Serial.println("The value of " + myDescription + " is " + myValue + " "  + myUnit); 
 }
