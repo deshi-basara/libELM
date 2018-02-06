@@ -14,12 +14,22 @@ Setting up the ELM library is fairly easy.
 **Note: This library uses SoftwareSerial to connect to the ELM chip. SoftwareSerial is not available on all Arduino pins! See the [Arduino Reference](https://www.arduino.cc/en/Reference/SoftwareSerial) for more information**
 
 ```cpp
-ELM myELM;
+#include <elm.h>
 
-int serialRX = 8;
-int serialTX = 9;
+byte serialRX = 9;  // RX pin
+byte serialTX = 10; // TX pin
+ELM myELM(serialRX, serialTX);
 
-myELM.begin(serialRX, serialTX);
+void setup() {
+  // initialize ELM's connection at 9600 baud
+  int UARTbaud = 9600;
+  myELM.begin(UARTbaud);
+  // initialize serial and wait for port to open
+  Serial.begin(9600);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB
+  }
+}
 ```
 
 ## Reading a PID
