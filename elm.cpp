@@ -169,7 +169,8 @@ String ELM::get_pid_desc(byte id) {
 		return myDesc;
 	#else 
 		return ERROR+" parsing of pid data not available on this microcontroller";
-	#endif}
+	#endif
+}
 
 /*
  * Get the vehicle identification number (vin)
