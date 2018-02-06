@@ -48,7 +48,7 @@ String myValue = myELM.get_pid_data(pid);
 String myDescription = myELM.get_pid_desc(pid);
 String myUnit = myELM.get_pid_unit(pid);
 
-Serial.println("The value of " + myDesc + " is " + myValue + " "  + myUnit); 
+Serial.println("The value of " + myDescription + " is " + myValue + " "  + myUnit); 
 ```
 
 ## Reading all supported PIDs

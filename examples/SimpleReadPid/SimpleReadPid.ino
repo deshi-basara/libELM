@@ -23,5 +23,5 @@ void loop() {
   String myDescription = myELM.get_pid_desc(pid);
   String myUnit = myELM.get_pid_unit(pid);
   // print to serial monitor
-  Serial.println("The value of " + myDesc + " is " + myValue + " "  + myUnit); 
+  Serial.println("The value of " + myDescription + " is " + myValue + " "  + myUnit); 
 }
